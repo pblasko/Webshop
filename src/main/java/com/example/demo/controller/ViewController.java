@@ -8,6 +8,7 @@ public class ViewController {
 
     @GetMapping(value = "/")
     public String home() {
+        System.out.println("eddig eljon");
         return "home";
     }
 

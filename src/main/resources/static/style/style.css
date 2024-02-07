@@ -1,4 +1,4 @@
-@import url('https://fonts.googleVis.com/css2?family=Rale way:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap');
 
 * {
     padding: 0;
@@ -9,7 +9,7 @@
 body {
     background: linear-gradient(to right, #25d391, #2755bd);
     color: #fff;
-    font-family: 'Rale way', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .nav-bar {
@@ -250,4 +250,20 @@ footer {
 
 .center {
     justify-self: center;
+}
+
+.image {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

@@ -11,4 +11,9 @@ public class ViewController {
         return "home";
     }
 
+    @GetMapping(value = "/albacloud")
+    public String albacloud() {
+        return "landing";
+    }
+
 }

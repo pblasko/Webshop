@@ -87,6 +87,9 @@ section {
     font-size: 40px;
     text-transform: capitalize;
     margin-bottom: 0.5rem;
+    background: -webkit-linear-gradient(0deg, ##2755bd 0%, ##25d391 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .title h2 {

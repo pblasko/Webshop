@@ -16,13 +16,9 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-section {
-    height: 100vh;
-}
-
 .section-one {
     width: 100vw;
-    height: 100vh;
+    height: 85vh;
 }
 
 .first-image-wrapper {
@@ -182,4 +178,32 @@ a:hover {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 85px;
     margin-top: -2px;
+}
+
+.section-two {
+    width: 100vw;
+    height: auto;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+}
+
+.content-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+}
+
+.content {
+    padding: 2rem 3rem;
+}
+
+.content p {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    text-align: center;
 }

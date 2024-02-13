@@ -14,11 +14,10 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    width: 100vw !important;
 }
 
 section {
-    width: 100vw;
+    width: 100%;
 }
 
 .section-one {
@@ -51,11 +50,11 @@ section {
 }
 
 .container-first {
-    width: 100vw;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
 }
 
 .nav-bar {
@@ -190,7 +189,7 @@ a:hover {
 }
 
 .section-two {
-    width: 100%
+    width: 100%;
     height: 100%;
     margin: 5rem 0;
 }
@@ -227,7 +226,6 @@ a:hover {
 }
 
 .section-three {
-    width: 100vw;
     height: 85vh;
     background: yellow;
     position: relative;
@@ -402,7 +400,6 @@ a:hover {
 }
 
 .title2 {
-    width: 1500px;
     justify-self: center;
     align-self: center;
 }
@@ -413,4 +410,135 @@ a:hover {
     font-size: 1.2rem;
     line-height: 1.2;
     margin: 1rem 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.section-six {
+    width: 100%;
+    height: 85px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.text-footer {
+    justify-self: center;
+    align-self: center;
+    font-style: italic;
+}
+
+@media screen and (max-width: 1500px) {
+  .title2 p {
+    padding-left: 4rem;
+  }
+  .section-three .content-wrapper3 {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+    .third-content,
+    .title {
+        width: 90vw;
+    }
+    .offer {
+      padding: 0 1rem;
+    }
+    .section-three h1 {
+        font-size: 1.8rem;
+    }
+    .section-three h2 {
+        font-size: 1.3rem;
+    }
+    .image-text-wrapper h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .menu-items {
+        visibility: hidden;
+    }
+    .image-item-container {
+        visibility: hidden;
+    }
+    .inage-logo-wrapper {
+        margin-top: -115px;
+    }
+    .image-text-wrapper {
+        padding: 0 1rem;
+    }
+    .image-text-wrapper h1 {
+        font-size: 2rem;
+    }
+    .image-text-wrapper h2 {
+        font-size: 1rem;
+    }
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .section-three .content-wrapper3 {
+      width: 90vw;
+      left: 5vw;
+      text-align: center;
+    }
+    .offer-wrapper {
+        left: 0;
+        right: 0;
+        height: 20vh;
+        bottom: -5vh;
+    }
+    .offer {
+        grid-template-rows: 20vh;
+    }
+    .third-image-wrapper {
+        height: 30vh;
+    }
+    .section-three .offer-content h1 {
+        font-size: 0.8rem;
+    }
+    .third-content-wrapper {
+        height: 70vh;
+    }
+    .third-text h1 {
+        font-size: 1.5rem;
+    }
+    .third-text p {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        margin: 2rem 0;
+    }
+    .title h1 {
+        font-size: 1.5rem;
+    }
+    .title2-wrapper {
+        height: 65vh;
+    }
+    .title2 {
+        width: 100%
+    }
+    .title2 p {
+        padding: 0 5vw;
+        font-size: 1rem;
+        line-height: 1;
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    .footer {
+        visibility: hidden;
+    }
+    .section-three .content-wrapper3 h1 {
+        font-size: 1.5rem;
+    }
+    .text-footer {
+        font-size: 0.6rem;
+    }
 }

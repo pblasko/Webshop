@@ -59,3 +59,82 @@ gsap.from('.offerbutton', {
     delay: 2.5,
     duration: 0.5
 })
+
+gsap.utils.toArray('.rotation1').forEach(rotate=>{
+    gsap.fromTo(rotate, {
+        opacity: 0,
+        rotation: 360,
+    }, {
+        opacity: 1,
+        rotation: 0,
+        duration: 1,
+        delay: 0.5,
+        scrollTrigger: rotate
+    })
+})
+
+gsap.utils.toArray('.text1').forEach(rotate=>{
+    gsap.fromTo(rotate, {
+        opacity: 0,
+        y: 16,
+    }, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: 0.5,
+        scrollTrigger: rotate
+    })
+})
+
+gsap.utils.toArray('.rotation2').forEach(rotate=>{
+    gsap.fromTo(rotate, {
+        opacity: 0,
+        rotation: 360,
+    }, {
+        opacity: 1,
+        rotation: 0,
+        duration: 1,
+        delay: 0.75,
+        scrollTrigger: rotate
+    })
+})
+
+gsap.utils.toArray('.text2').forEach(rotate=>{
+    gsap.fromTo(rotate, {
+        opacity: 0,
+        y: 16,
+    }, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: 0.75,
+        scrollTrigger: rotate
+    })
+})
+
+gsap.utils.toArray('.rotation3').forEach(rotate=>{
+    gsap.fromTo(rotate, {
+        opacity: 0,
+        rotation: 360,
+    }, {
+        opacity: 1,
+        rotation: 0,
+        duration: 1,
+        delay: 1,
+        scrollTrigger: rotate
+    })
+})
+
+gsap.utils.toArray('.text3').forEach(rotate=>{
+    gsap.fromTo(rotate, {
+        opacity: 0,
+        y: 16,
+    }, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: 1,
+        scrollTrigger: rotate
+    })
+})
+

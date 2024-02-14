@@ -237,7 +237,7 @@ a:hover {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to right, var(--blue), transparent);;
+    background: linear-gradient(to right, var(--blue), transparent);
     opacity: 1
 }
 
@@ -549,4 +549,28 @@ a:hover {
     .text-footer {
         font-size: 0.6rem;
     }
+}
+
+.offerbutton {
+    position: relative;
+    z-index: 1;
+}
+
+.offerbutton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to left, var(--blue), var(--green));
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.offerbutton:hover::before,
+.offerbutton:focus::before {
+    transform: scaleX(1);
 }

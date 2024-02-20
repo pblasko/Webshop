@@ -137,4 +137,3 @@ gsap.utils.toArray('.text3').forEach(rotate=>{
         scrollTrigger: rotate
     })
 })
-

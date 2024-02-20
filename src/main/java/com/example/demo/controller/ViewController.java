@@ -16,4 +16,9 @@ public class ViewController {
         return "landing";
     }
 
+    @GetMapping(value = "/webshop")
+    public String webshophome() {
+        return "home_page";
+    }
+
 }

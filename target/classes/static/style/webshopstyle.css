@@ -25,7 +25,38 @@ section {
 
 .showColors {
     filter: grayscale(0%);
-    animation: letItColors 3s ease;
+    animation: letItColors 5s ease;
+}
+
+.background-content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem auto 5rem;
+}
+
+.content-body {
+    justify-self: center;
+    align-self: center;
+}
+
+.card {
+    border-radius: 0 !important;
+    width: 80vw;
+    max-width: 500px;
+    animation: showCard 5s ease;
+}
+
+.hiddenCard {
+    opacity: 0;
+    animation: hiddenCard 2s ease;
+}
+
+.content-body button {
+    color: white;
+    background: black;
+    padding: 0.5rem 2rem;
 }
 
 @keyframes letItGray {
@@ -41,12 +72,31 @@ section {
     0% {
         filter: grayscale(100%);
     }
+    40% {
+            filter: grayscale(100%);
+        }
     100% {
         filter: grayscale(0%);
     }
 }
 
-#map {
-    width: 600px;
-    height: 400px;
+@keyframes showCard {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hiddenCard {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0 !important;
+    }
 }

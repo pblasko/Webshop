@@ -18,20 +18,31 @@ section {
     background-image: url("../images/webshop/background1.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    object-fit: cover;
-}
-
-.blackout {
+    background-size: cover;
     filter: grayscale(100%);
-    animation: dark 3s ease;
+    animation: letItGray 3s ease;
 }
 
-@keyframes dark {
+.showColors {
+    filter: grayscale(0%);
+    animation: letItColors 3s ease;
+}
+
+@keyframes letItGray {
     0% {
         filter: grayscale(0%);
     }
     100% {
         filter: grayscale(100%);
+    }
+}
+
+@keyframes letItColors {
+    0% {
+        filter: grayscale(100%);
+    }
+    100% {
+        filter: grayscale(0%);
     }
 }
 

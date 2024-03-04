@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap');
+
+:root {
+    --blue: #55B5E5;
+    --black: #000000;
+    --white: #FFFFFF;
+    --yellow: #FFC905;
+    --red: #D8000F;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -15,88 +25,20 @@ section {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url("../images/webshop/background1.jpg");
+    background-image: url("../images/webshop/south-america.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: grayscale(100%);
-    animation: letItGray 3s ease;
 }
 
-.showColors {
-    filter: grayscale(0%);
-    animation: letItColors 5s ease;
+@media screen and (min-width: 600px) {
+  .background-wrapper {
+    background-image: url("../images/webshop/america.jpg");
+  }
 }
 
-.background-content {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 5rem auto 5rem;
-}
-
-.content-body {
-    justify-self: center;
-    align-self: center;
-}
-
-.card {
-    border-radius: 0 !important;
-    width: 80vw;
-    max-width: 500px;
-    animation: showCard 5s ease;
-}
-
-.hiddenCard {
-    opacity: 0;
-    animation: hiddenCard 2s ease;
-}
-
-.content-body button {
-    color: white;
-    background: black;
-    padding: 0.5rem 2rem;
-}
-
-@keyframes letItGray {
-    0% {
-        filter: grayscale(0%);
-    }
-    100% {
-        filter: grayscale(100%);
-    }
-}
-
-@keyframes letItColors {
-    0% {
-        filter: grayscale(100%);
-    }
-    40% {
-            filter: grayscale(100%);
-        }
-    100% {
-        filter: grayscale(0%);
-    }
-}
-
-@keyframes showCard {
-    0% {
-        opacity: 0;
-    }
-    60% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes hiddenCard {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0 !important;
-    }
+@media screen and (min-width: 1100px) {
+  .background-wrapper {
+    background-image: url("../images/webshop/world.jpg");
+  }
 }

@@ -3,9 +3,10 @@ const ageBtn = document.querySelector('#age-btn').addEventListener("click", ageV
 const hamburger = document.querySelector('.hamburger-icon');
 const ageCard = document.querySelector('.my-card');
 const mobileMenu = document.querySelector('.mobile-menu-wrapper');
+const closeBtn = document.querySelector('.close-icon');
 
 function ageValidation() {
-    console.log('click me');
+    document.cookie = "status=1";
     hamburger.classList.add('showOne');
     hamburger.addEventListener('click', openMobileMenu);
     ageCard.classList.add('hiddenOne');
@@ -13,13 +14,28 @@ function ageValidation() {
 }
 
 function openMobileMenu() {
-    console.log('menu');
+    hamburger.classList.remove('showOne');
+    hamburger.classList.add('hidden');
+    closeBtn.classList.remove('hidden');
+    closeBtn.classList.add('showOne');
+    closeBtn.addEventListener('click', closeMobileMenu);
+    mobileMenu.classList.remove('hiddenTwo');
     mobileMenu.classList.add('showTwo');
     getShowToElement(mobileMenu);
 }
 
+function closeMobileMenu() {
+    closeBtn.classList.remove('showOne');
+    closeBtn.classList.add('hidden');
+    hamburger.classList.remove('hidden');
+    hamburger.classList.add('showOne');
+    hamburger.addEventListener('click', openMobileMenu);
+    mobileMenu.classList.remove('showTwo');
+    mobileMenu.classList.add('hiddenTwo');
+    getHiddenToElement(mobileMenu);
+}
+
 function getHiddenToElement(item) {
-    item.classList.remove('show');
     setTimeout(() => {
         item.classList.add('hidden');
     }, "2000");
@@ -44,6 +60,7 @@ navigator.geolocation.getCurrentPosition((position) => {
     if(document.cookie) {
         if(document.cookie == 'status=0') {
             console.log('status 0');
+            changeHomepageNull();
         } else if(document.cookie == 'status=1') {
             console.log('status 1');
             changeHomepageOne();
@@ -54,6 +71,7 @@ navigator.geolocation.getCurrentPosition((position) => {
         }
     } else {
         document.cookie = "status=0";
+        changeHomepageNull();
     }
     getData(latitude, longitude)
 })
@@ -72,46 +90,14 @@ function getData(latitude, longitude) {
       });
 }
 
+function changeHomepageNull() {
+    ageCard.classList.remove('hidden');
+    ageCard.classList.remove('show1');
+    ageCard.classList.add('show1');
+}
+
 function changeHomepageOne() {
-    wrapper.classList.remove('showColors');
-    wrapper.classList.remove('wrapperStatusNull');
-    wrapper.classList.add('wrapperStatusOne');
-    card.classList.remove('hiddenCard');
-    card.classList.remove('showCard');
-    card.classList.add('cardStatusOne');
-    menu.classList.remove('hiddenUl');
-    menu.classList.add('menu-items');
-    first_li.classList.remove('hidden_li');
-    first_li.classList.add('show_li');
-    setTimeout(() => {
-      second_li.classList.remove('hidden_li');
-      second_li.classList.add('show_li');
-    }, "1000");
-    setTimeout(() => {
-      third_li.classList.remove('hidden_li');
-      third_li.classList.add('show_li');
-    }, "2000");
-    setTimeout(() => {
-      fourth_li.classList.remove('hidden_li');
-      fourth_li.classList.add('show_li');
-    }, "3000");
-    hamburger.classList.add('show_li');
-    sectionTwo.classList.remove('hidden-section');
-    sectionTwo.classList.add('show-section');
-    sectionThree.classList.remove('hidden-section');
-    sectionThree.classList.add('show-section');
-}
-
-function openMobilMenu() {
-    mobilMenuWrapper.classList.remove('closeMobilMenuWrapper');
-    mobilMenuWrapper.classList.add('openMobilMenuWrapper');
-    mobilMenu.classList.remove('closeMobilMenu');
-    mobilMenu.classList.add('openMobilMenu');
-}
-
-function closeMobilMenu() {
-    mobilMenuWrapper.classList.remove('openMobilMenuWrapper');
-    mobilMenuWrapper.classList.add('closeMobilMenuWrapper');
-    mobilMenu.classList.remove('openMobilMenu');
-    mobilMenu.classList.add('closeMobilMenu');
+    hamburger.classList.add('showOne');
+    hamburger.addEventListener('click', openMobileMenu);
+    ageCard.classList.add('hidden');
 }

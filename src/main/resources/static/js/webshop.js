@@ -101,3 +101,18 @@ function changeHomepageOne() {
     hamburger.addEventListener('click', openMobileMenu);
     ageCard.classList.add('hidden');
 }
+
+function doSomething() {
+    console.log(window.innerWidth);
+    closeBtn.classList.remove('showOne');
+    closeBtn.classList.add('hidden');
+    hamburger.classList.remove('hidden');
+    hamburger.classList.add('showOne');
+    hamburger.addEventListener('click', openMobileMenu);
+    mobileMenu.classList.remove('showTwo');
+    mobileMenu.classList.add('hiddenTwo');
+    getHiddenToElement(mobileMenu);
+}
+
+// when Resize browser, check window-width; refresh if current device indice not initial device indice
+window.addEventListener('resize', doSomething, true);
